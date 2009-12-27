@@ -1,4 +1,4 @@
-module Spruz
+module Koalemos
   module UniqBy
     def uniq_by(&b)
       b ||= lambda { |x| x }

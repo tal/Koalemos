@@ -1,4 +1,4 @@
-module Spruz
+module Koalemos
   module Blank
     module Object
       def blank?

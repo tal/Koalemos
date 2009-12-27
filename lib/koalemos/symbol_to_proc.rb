@@ -1,4 +1,4 @@
-module Spruz
+module Koalemos
   module ToProc
     def to_proc
       lambda do |obj, *args|

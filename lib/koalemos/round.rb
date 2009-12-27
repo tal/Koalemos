@@ -1,4 +1,4 @@
-module Spruz
+module Koalemos
   # A bit more versatile rounding for Ruby
   module Round
     def self.included(klass)
