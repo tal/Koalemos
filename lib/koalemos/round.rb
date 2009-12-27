@@ -1,21 +1,21 @@
 module Koalemos
   # A bit more versatile rounding for Ruby
-  module Round
-    def self.included(klass)
-      if klass.instance_method(:round)
-        klass.class_eval do
-          begin
-            remove_method :round
-          rescue NameError
-          end
-        end
-        super
-      else
-        raise NoMethodError, 'no round method found'
-      end
-    end
+  module RoundTo
+      # def self.included(klass)
+      #   if klass.instance_method(:round)
+      #     klass.class_eval do
+      #       begin
+      #         remove_method :round
+      #       rescue NameError
+      #       end
+      #     end
+      #     super
+      #   else
+      #     raise NoMethodError, 'no round method found'
+      #   end
+      # end
 
-    def round(places = 0)
+    def round_to(places = 0)
       unless Integer === places
         raise TypeError, "argument places has to be an Integer"
       end
@@ -33,6 +33,12 @@ module Koalemos
       end
       t /= f
       t.nan? ? self : t
+    end
+  end
+  
+  class ::Float
+    unless method_defined?(:round_to)
+      include RoundTo
     end
   end
 end
