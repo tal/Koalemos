@@ -5,8 +5,8 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "koalemos"
-    gem.summary = %Q{Some extensions for me in all my projects}
-    gem.description = %Q{Nothing here you'd be interested in}
+    gem.summary = %Q{A bunch of small extensions to built in classes/modules}
+    gem.description = %Q{A bunch of small extensions to built in classes/modules}
     gem.email = "me@talatlas.com"
     gem.homepage = "http://github.com/Talby/koalemos"
     gem.authors = ["Tal Atlas"]
