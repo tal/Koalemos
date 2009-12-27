@@ -1,4 +1,4 @@
-module Koalemos
+module Koalemos # :nodoc:
   module Full
     # Returns the object if it isn't blank (as in Object#blank?), otherwise it
     # returns nil. If a block was given as an argument and the object isn't
@@ -25,7 +25,7 @@ module Koalemos
     end
   end
  
-  class ::Object
+  class ::Object # :nodoc:
     include Full
   end
 end

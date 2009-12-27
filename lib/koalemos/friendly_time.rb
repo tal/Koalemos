@@ -1,7 +1,8 @@
 require File.join(File.dirname(__FILE__),'num_to_time.rb')
 
-module Koalemos
-  module FriendlyTime
+module Koalemos # :nodoc:
+  module FriendlyTime# :nodoc:
+    # Friendly time
     def friendly(since = Time.now)
       ago = since - self
       case ago
@@ -31,7 +32,7 @@ module Koalemos
     end
   end
   
-  class ::Time
+  class ::Time # :nodoc:
     if !method_defined?(:friendly) && ::Numeric.method_defined?(:day)
       include FriendlyTime
     else

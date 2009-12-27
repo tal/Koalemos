@@ -1,6 +1,7 @@
-module Koalemos
+module Koalemos # :nodoc:
   class ::Numeric
     unless method_defined?(:commafy)
+      # Returns a string for a number with commas ever 3 digits
       def commaify
         to_s.reverse.scan(/(?:\d*\.)?\d{1,3}-?/).join(',').reverse
       end
@@ -9,7 +10,7 @@ module Koalemos
   
   class ::Float
     unless method_defined?(:commafy)
-      def commaofy
+      def commaofy# :nodoc:
         to_s.gsub(/\d+\./) do |s|
           s.reverse.scan(/(?:\d*\.)?\d{1,3}-?/).join(',').reverse
         end

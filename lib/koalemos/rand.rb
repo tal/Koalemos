@@ -6,7 +6,8 @@
 # Documentation:: Christian Neukirchen <mailto:chneukirchen@gmail.com>
 # 
 
-module Koalemos
+module Koalemos # :nodoc:
+  # @author Ilmari Heikkinen
   module Rand
     module Enumerable_
       # Choose and return a random element of the Enumerable.

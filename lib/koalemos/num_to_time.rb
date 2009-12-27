@@ -1,49 +1,55 @@
-module Koalemos
+module Koalemos # :nodoc:
+  # Blah blah blah
   module NumToTime
-    def minute
+    def minute# :nodoc:
       self * 60
     end
-    alias_method :minutes, :minute
+    alias_method :minutes, :minute# :nodoc:
 
-    def hour
+    def hour# :nodoc:
       self * 3600
     end
-    alias_method :hours, :hour
+    alias_method :hours, :hour# :nodoc:
 
-    def day
+    def day# :nodoc:
       self * 86400
     end
-    alias_method :days, :day
+    alias_method :days, :day# :nodoc:
 
-    def week
+    def week# :nodoc:
       self * 604800
     end
-    alias_method :weeks, :week
+    alias_method :weeks, :week# :nodoc:
 
-    def month
+    def month# :nodoc:
       self * 2592000
     end
-    alias_method :months, :month
+    alias_method :months, :month# :nodoc:
 
-    def year
+    def year# :nodoc:
       self * 31536000
     end
-    alias_method :years, :year
-
+    alias_method :years, :year# :nodoc:
+    
+    # Changes a number into a Time object num seconds in the past
+    #   60.ago #=> 1 minute ago
     def ago
       Time.now - to_i
     end
-
+    
+    # Changes a number into a Time object num seconds in the future
+    #   60.ago #=> 1 minute from now
     def from_now
       Time.now + to_i
     end
-
+    
+    # Converts seconds to Epoch time
     def to_time
       Time.at(to_i)
     end
   end
   
-  class ::Numeric
+  class ::Numeric # :nodoc:
     unless method_defined?(:minute)
       include NumToTime
     end

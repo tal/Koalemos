@@ -1,4 +1,4 @@
-module Koalemos
+module Koalemos # :nodoc:
   # A bit more versatile rounding for Ruby
   module RoundTo
       # def self.included(klass)
@@ -14,7 +14,9 @@ module Koalemos
       #     raise NoMethodError, 'no round method found'
       #   end
       # end
-
+    
+    # A more versitile rounding function that rounds to an arbitrary number
+    # of decimil places
     def round_to(places = 0)
       unless Integer === places
         raise TypeError, "argument places has to be an Integer"
@@ -36,7 +38,7 @@ module Koalemos
     end
   end
   
-  class ::Float
+  class ::Float # :nodoc:
     unless method_defined?(:round_to)
       include RoundTo
     end
