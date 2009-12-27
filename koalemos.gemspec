@@ -9,8 +9,8 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Tal Atlas"]
-  s.date = %q{2009-12-26}
-  s.description = %q{Nothing here you'd be interested in}
+  s.date = %q{2009-12-27}
+  s.description = %q{A bunch of small extensions to built in classes/modules}
   s.email = %q{me@talatlas.com}
   s.extra_rdoc_files = [
     "LICENSE",
@@ -46,7 +46,7 @@ Gem::Specification.new do |s|
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.5}
-  s.summary = %q{Some extensions for me in all my projects}
+  s.summary = %q{A bunch of small extensions to built in classes/modules}
   s.test_files = [
     "spec/koalemos_spec.rb",
      "spec/spec_helper.rb"
