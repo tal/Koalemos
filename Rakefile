@@ -6,7 +6,7 @@ begin
   Jeweler::Tasks.new do |gem|
     gem.name = "koalemos"
     gem.summary = %Q{Some extensions for me in all my projects}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.description = %Q{Nothing here you'd be interested in}
     gem.email = "me@talatlas.com"
     gem.homepage = "http://github.com/Talby/koalemos"
     gem.authors = ["Tal Atlas"]
